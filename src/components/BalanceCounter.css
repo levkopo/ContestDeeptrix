@@ -1,0 +1,26 @@
+.BalanceCounter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 6px 16px 6px 6px;
+    gap: 12px;
+
+    width: 88px;
+    height: 32px;
+
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+}
+
+.BalanceCounter-Icon {
+    color: #F2C94C;
+    margin-left: 5px;
+}
+
+.BalanceCounter-Text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+
+    color: #F2F2F2;
+}

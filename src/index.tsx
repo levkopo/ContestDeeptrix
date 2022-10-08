@@ -1,19 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import "@vkontakte/vkui/dist/vkui.css";
+import {
+    AdaptivityProvider,
+    ConfigProvider,
+} from "@vkontakte/vkui";
+import bridge from "@vkontakte/vk-bridge";
+import './index.css';
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+window.addEventListener("load", () => {
+    bridge.send('VKWebAppInit').catch(console.error);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+    const root = ReactDOM.createRoot(
+        document.getElementById('root') as HTMLElement
+    );
+    root.render(
+        <ConfigProvider>
+            <AdaptivityProvider>
+                <App />
+            </AdaptivityProvider>
+        </ConfigProvider>,
+    );
+});
+
 reportWebVitals();
