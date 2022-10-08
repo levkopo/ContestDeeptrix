@@ -134,7 +134,7 @@ export default function ShopPanel(props: PanelProps) {
                                 mode="outline"
                                 className="ShopPanel-Item-Icon"
                             >
-                                <img src={it.icon} alt={it.title}/>
+                                <img src={it.icon} alt={it.title} className="ShopPanel-Item-Icon-Image"/>
                             </Card>
 
                             <div className="ShopPanel-Item-Title">{it.title}</div>

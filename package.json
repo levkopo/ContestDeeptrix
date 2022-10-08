@@ -11,6 +11,8 @@
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
     "@vkontakte/vk-bridge": "^2.7.0",
+    "@vkontakte/vk-miniapps-deploy": "^0.0.26",
+    "@vkontakte/vk-tunnel": "^0.1.2",
     "@vkontakte/vkui": "^4.37.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -19,10 +21,12 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "tunnel": "vk-tunnel --insecure=1 --http-protocol=http --ws-protocol=wss --host=localhot --port=3000",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "react-scripts build && vk-miniapps-deploy"
   },
   "eslintConfig": {
     "extends": [

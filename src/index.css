@@ -6,4 +6,9 @@
     --vkui--size_border_radius_paper--regular: 20px;
     --vkui--size_card_border_radius--regular: 20px;
     --vkui--size_border_radius--regular: 20px;
+    --panelheader_height_vkcom: 56px;
+}
+
+*::-webkit-scrollbar {
+    width: 0;
 }
